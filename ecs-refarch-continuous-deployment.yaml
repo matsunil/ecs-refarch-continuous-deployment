@@ -11,7 +11,7 @@ Description: >
 
 Parameters:
   LaunchType:
-    Type: String
+    Type: EC2
     Default: Fargate
     AllowedValues:
       - Fargate
@@ -23,27 +23,27 @@ Parameters:
       to learn more about launch types.
 
   GitHubUser:
-    Type: String
+    Type: matsunil
     Description: Your username on GitHub.
 
   GitHubRepo:
-    Type: String
+    Type: https://github.com/matsunil/ecs-refarch-continuous-deployment.git
     Default: ecs-demo-php-simple-app
     Description: The repo name of the sample service.
 
   GitHubBranch:
-    Type: String
+    Type: master
     Default: master
     Description: The branch of the repo to continuously deploy.
 
   GitHubToken:
-    Type: String
+    Type: 2f6907985e7e15f923649b3fca96b36097300da2
     NoEcho: true
     Description: >
       Token for the user specified above. (https://github.com/settings/tokens)
 
   TemplateBucket:
-    Type: String
+    Type: sunil-ecs-refarch-continuous-deployment
     Default: ecs-refarch-continuous-deployment
     Description: >
       The S3 bucket from which to fetch the templates used by this stack.
